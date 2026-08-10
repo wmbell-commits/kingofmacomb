@@ -50,6 +50,35 @@ h2{font-size:clamp(2.4rem,5vw,4.7rem);line-height:.95;letter-spacing:-.04em;marg
 .payment .paytitle{font-weight:900;letter-spacing:.14em;margin:5px 0 14px}
 .payment strong{display:block;margin-top:5px;font-size:1.15rem}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted)}
+
+.price-banner{
+  margin:28px 0 0;
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  padding:14px 18px;
+  border:1px solid rgba(241,164,43,.45);
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(241,164,43,.14),rgba(20,92,255,.08));
+}
+.price-banner .price{
+  font-size:2.25rem;
+  line-height:1;
+  font-weight:950;
+  color:var(--gold);
+  letter-spacing:-.04em;
+}
+.price-banner .price-copy{
+  color:var(--muted);
+  font-size:.92rem;
+}
+.price-banner .price-copy strong{
+  display:block;
+  color:#fff;
+  font-size:1rem;
+  margin-bottom:2px;
+}
+
 @media(max-width:820px){
  .hero-grid,.order-grid{grid-template-columns:1fr}
  .cards{grid-template-columns:1fr}
@@ -89,8 +118,12 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted)}
    <div class="eyebrow">LOCAL APPAREL</div>
    <h2>Made here. Worn here.</h2>
    <p class="copy">We’re starting small and producing shirts in-house with our heat press. Current designs and custom requests are available by direct order.</p>
+   <div class="price-banner">
+     <div class="price">$30</div>
+     <div class="price-copy"><strong>King of Macomb shirts</strong>Current shirt price • contact us for available designs, colors, and sizes.</div>
+   </div>
    <div class="cards">
-     <div class="card"><div class="num">01</div><h3>Local Designs</h3><p>Macomb County shirts with hometown pride, personality, and original artwork.</p></div>
+     <div class="card"><div class="num">01</div><h3>Local Designs — $30</h3><p>Macomb County shirts with hometown pride, personality, and original artwork.</p></div>
      <div class="card"><div class="num">02</div><h3>Custom Shirts</h3><p>Send us your idea, saying, event, or group-shirt request and we’ll work with you.</p></div>
      <div class="card"><div class="num">03</div><h3>Small Batch</h3><p>Flexible local production for one-offs, families, groups, events, and small runs.</p></div>
    </div>
@@ -102,10 +135,10 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted)}
    <div>
      <div class="eyebrow">ORDER & PAYMENT</div>
      <h2>Ready to order?</h2>
-     <p class="copy">Send Kristin your design, shirt size, quantity, and preferred color. Once the order is confirmed, pay with Venmo.</p>
+     <p class="copy"><strong style="color:white">Shirts are $30 each.</strong> Send Kristin your design, shirt size, quantity, and preferred color. Once the order is confirmed, pay with Venmo.</p>
      <div class="steps">
        <div><strong>1.</strong> Email your shirt request.</div>
-       <div><strong>2.</strong> Confirm price and pickup or delivery.</div>
+       <div><strong>2.</strong> Confirm your $30 shirt order and pickup or delivery.</div>
        <div><strong>3.</strong> Pay Kristin through Venmo.</div>
      </div>
      <div class="actions"><a class="btn primary" href="mailto:misskristin2808@yahoo.com?subject=King%20of%20Macomb%20Order&body=Hi%20Kristin%2C%0A%0AI%27d%20like%20to%20order%3A%0A%0ADesign%3A%0AShirt%20size%3A%0AQuantity%3A%0AColor%3A%0A">START AN ORDER</a></div>
