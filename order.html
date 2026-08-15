@@ -48,6 +48,7 @@ textarea{min-height:110px;resize:vertical}
 button{border:0;border-radius:9px;background:var(--gold);color:#090909;font-weight:950;padding:14px 20px;font-size:1rem;cursor:pointer}
 .note{font-size:.86rem;color:#777}
 .success{display:none;margin-top:18px;padding:15px;background:#fff4d8;border-left:4px solid var(--gold);font-weight:700}
+.square-btn{display:inline-block;border-radius:9px;background:var(--gold);color:#090909;font-weight:950;padding:15px 22px;font-size:1rem;text-decoration:none}
 footer{padding:28px 0;background:#06080c;color:#8e96a5}
 @media(max-width:820px){
  .layout{grid-template-columns:1fr}
@@ -78,7 +79,7 @@ footer{padding:28px 0;background:#06080c;color:#8e96a5}
  <div class="wrap">
   <div class="eyebrow">KING OF MACOMB • ORDER FORM</div>
   <h1>Pick your gear.</h1>
-  <p class="lead">Choose your item, size, color, and quantity. When you submit, your preferred email app opens with the order already organized and addressed to Kristin.</p>
+  <p class="lead">Choose your King of Macomb gear and check out securely with Square. T-shirts are available now; hoodies are coming next.</p>
   <div class="price-row">
    <div class="price"><b>$30</b> T-shirt</div>
    <div class="price"><b>$60</b> Hoodie</div>
@@ -89,9 +90,9 @@ footer{padding:28px 0;background:#06080c;color:#8e96a5}
 <main>
  <div class="wrap layout">
   <aside class="side">
-   <div class="eyebrow" style="color:#946000">ORDER DETAILS</div>
+   <div class="eyebrow" style="color:#946000">SECURE CHECKOUT</div>
    <h2>Made local. Worn local.</h2>
-   <p>Complete the form and review the generated email before sending it to Kristin. Order availability is confirmed before payment.</p>
+   <p>Choose your item below and complete payment securely through Square. Size and color are entered during checkout.</p>
    <div class="side-card">
     <strong>Questions?</strong>
     <a href="mailto:misskristin2808@yahoo.com?subject=King%20of%20Macomb%20Question">misskristin2808@yahoo.com</a>
@@ -99,87 +100,29 @@ footer{padding:28px 0;background:#06080c;color:#8e96a5}
   </aside>
 
   <section class="form-card">
-   <h2>King of Macomb Order</h2>
-   <p class="intro">Required fields are marked with *. No payment is collected on this page.</p>
-
-   <form id="orderForm">
-    <div class="grid">
-     <div class="field"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div>
-     <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-     <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-     <div class="field"><label for="item">Item *</label>
-      <select id="item" name="item" required>
-       <option value="">Select an item</option>
-       <option value="T-shirt - $30">T-shirt — $30</option>
-       <option value="Hoodie - $60">Hoodie — $60</option>
-      </select>
-     </div>
-     <div class="field"><label for="size">Size *</label>
-      <select id="size" name="size" required>
-       <option value="">Select size</option>
-       <option>Small</option><option>Medium</option><option>Large</option><option>XL</option><option>2XL</option><option>3XL</option>
-      </select>
-     </div>
-     <div class="field"><label for="color">Color *</label>
-      <select id="color" name="color" required>
-       <option value="">Select color</option>
-       <option>Black</option><option>White</option>
-      </select>
-     </div>
-     <div class="field"><label for="qty">Quantity *</label><input id="qty" name="qty" type="number" min="1" value="1" required></div>
-     <div class="field"><label for="fulfillment">Pickup / delivery preference</label>
-      <select id="fulfillment" name="fulfillment">
-       <option>Contact me to arrange</option>
-       <option>Pickup</option>
-       <option>Delivery</option>
-      </select>
-     </div>
-     <div class="field full"><label for="notes">Notes</label><textarea id="notes" name="notes" placeholder="Anything Kristin should know about your order?"></textarea></div>
-    </div>
-    <div class="actions">
-     <button type="submit">CREATE ORDER EMAIL</button>
-     <span class="note">Your email app will open with Kristin's address already filled in.</span>
-    </div>
-    <div id="success" class="success">Your email app should open now. Review the order and press Send.</div>
-   </form>
+   <h2>King of Macomb T-Shirt</h2>
+   <p class="intro">$30 • Sizes M, L, XL • Black or White</p>
+   <p>Click below to continue to Square's secure checkout. You will enter your T-shirt size and color with your payment.</p>
+   <div class="actions">
+    <a class="square-btn" href="https://square.link/u/Zh06jTOG?src=embed" target="_blank" rel="noopener">ORDER T-SHIRT — $30</a>
+   </div>
+   <p class="note" style="margin-top:14px">Secure checkout powered by Square.</p>
+   <hr style="border:0;border-top:1px solid #ddd;margin:28px 0">
+   <h2 style="font-size:1.45rem">King of Macomb Hoodie</h2>
+   <p class="intro">$60 • Square checkout coming next.</p>
   </section>
  </div>
+
+<section style="margin:24px auto;max-width:760px;padding:24px;background:#fff;color:#111;border-radius:18px;text-align:center;">
+  <h2 style="margin-top:0;">King of Macomb Hoodie — $60</h2>
+  <p>Official King of Macomb gear featuring Jalen Kidd. Available in Black or White.</p>
+  <a href="https://square.link/u/4tajhP9w?src=embed" target="_blank" rel="noopener" style="display:inline-block;padding:14px 22px;border-radius:9px;background:#f6a51c;color:#090909;text-decoration:none;font-weight:900;">ORDER HOODIE — $60</a>
+</section>
+
 </main>
 
 <footer><div class="wrap">© 2026 King of Macomb</div></footer>
 
-<script>
-document.getElementById('orderForm').addEventListener('submit', function(e){
- e.preventDefault();
- const f = new FormData(this);
- const item = f.get('item');
- const qty = Number(f.get('qty') || 1);
- const unitPrice = item.startsWith('T-shirt') ? 30 : 60;
- const estimated = unitPrice * qty;
- const subject = 'King of Macomb Order - ' + f.get('name');
- const body = [
-  'KING OF MACOMB ORDER',
-  '',
-  'Customer: ' + f.get('name'),
-  'Email: ' + f.get('email'),
-  'Phone: ' + (f.get('phone') || 'Not provided'),
-  '',
-  'Item: ' + item,
-  'Size: ' + f.get('size'),
-  'Color: ' + f.get('color'),
-  'Quantity: ' + qty,
-  'Estimated merchandise total: $' + estimated,
-  'Pickup / delivery: ' + f.get('fulfillment'),
-  '',
-  'Notes:',
-  f.get('notes') || 'None',
-  '',
-  'Please confirm availability, final total, and pickup/delivery details.'
- ].join('\n');
 
- document.getElementById('success').style.display = 'block';
- window.location.href = 'mailto:misskristin2808@yahoo.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-});
-</script>
 </body>
 </html>
